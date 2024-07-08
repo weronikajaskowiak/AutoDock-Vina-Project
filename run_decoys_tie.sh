@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Create the output directory for Vina docking results if it doesn't exist
-mkdir -p vina_outputs_decoys_test
-mkdir -p vina_console_output_decoys_test
+mkdir -p vina_outputs_decoys
+mkdir -p vina_console_output_decoys
 
 # Define the receptor and config file
 RECEPTOR="2oo8_receptor_prepared.pdbqt"
@@ -10,7 +10,7 @@ CONFIG="grid_box.txt"
 EXHAUSTIVENESS=32
 
 # Loop through each ligand file in the output_ligands directory
-for LIGAND in 2oo8_check_deckoys/*.pdbqt; do
+for LIGAND in output_decoys/*.pdbqt; do
   # Check if there are no matching files
   if [ ! -e "$LIGAND" ]; then
     echo "No ligand files found in the output_ligands directory."
