@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Create the output directory for Vina docking results if it doesn't exist
-mkdir -p vina_outputs_new_ligands
-mkdir -p vina_console_output_new_ligands
+mkdir -p vina_outputs_1a4g
+mkdir -p vina_console_output_1a4g
 
 # Define the receptor and config file
-RECEPTOR="2oo8_receptor_prepared.pdbqt"
+RECEPTOR="1a4g_receptor_prepared.pdbqt"
 CONFIG="grid_box.txt"
-EXHAUSTIVENESS=32
+EXHAUSTIVENESS=20
 
 # Loop through each ligand file in the output_ligands directory
 for LIGAND in output_ligands/*.pdbqt; do
