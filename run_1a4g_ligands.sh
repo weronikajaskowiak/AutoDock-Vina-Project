@@ -21,10 +21,10 @@ for LIGAND in output_ligands/*.pdbqt; do
   BASENAME=$(basename "$LIGAND" .pdbqt)
   
   # Define the output file name in the vina_outputs directory
-  OUTPUT="vina_outputs_new_ligands/${BASENAME}_vina_output.pdbqt"
+  OUTPUT="vina_outputs_1a4g/${BASENAME}_vina_output.pdbqt"
   
   # Run the vina command
-  vina --receptor "$RECEPTOR" --ligand "$LIGAND" --config "$CONFIG" --exhaustiveness="$EXHAUSTIVENESS" --out "$OUTPUT" > vina_console_output_new_ligands/${BASENAME}_energy.txt
+  vina --receptor "$RECEPTOR" --ligand "$LIGAND" --config "$CONFIG" --exhaustiveness="$EXHAUSTIVENESS" --out "$OUTPUT" > vina_console_output_1a4g/${BASENAME}_energy.txt
   
   # Check if vina command was successful
   if [ $? -eq 0 ]; then
