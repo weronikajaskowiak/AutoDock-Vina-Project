@@ -10,7 +10,7 @@ CONFIG="grid_box.txt"
 EXHAUSTIVENESS=20
 
 # Loop through each ligand file in the output_ligands directory
-for LIGAND in output_ligands/*.pdbqt; do
+for LIGAND in output_ligands_1a4g/*.pdbqt; do
   # Check if there are no matching files
   if [ ! -e "$LIGAND" ]; then
     echo "No ligand files found in the output_ligands directory."
