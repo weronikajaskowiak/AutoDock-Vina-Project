@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Create the output directory for Vina docking results if it doesn't exist
-mkdir -p vina_outputs_decoys_new_grid
-mkdir -p vina_console_output_decoys_new_grid
+mkdir -p vina_outputs_decoys_1a4g
+mkdir -p vina_console_output_decoys_1a4g
 
 # Define the receptor and config file
 RECEPTOR="2oo8_receptor_prepared.pdbqt"
@@ -21,10 +21,10 @@ for LIGAND in output_decoys/*.pdbqt; do
   BASENAME=$(basename "$LIGAND" .pdbqt)
   
   # Define the output file name in the vina_outputs directory
-  OUTPUT="vina_outputs_decoys_new_grid/${BASENAME}_vina_output.pdbqt"
+  OUTPUT="vina_outputs_decoys_1a4g/${BASENAME}_vina_output.pdbqt"
   
   # Run the vina command
-  vina --receptor "$RECEPTOR" --ligand "$LIGAND" --config "$CONFIG" --exhaustiveness="$EXHAUSTIVENESS" --out "$OUTPUT" > vina_console_output_decoys_new_grid/${BASENAME}_energy.txt
+  vina --receptor "$RECEPTOR" --ligand "$LIGAND" --config "$CONFIG" --exhaustiveness="$EXHAUSTIVENESS" --out "$OUTPUT" > vina_console_output_decoys_1a4g/${BASENAME}_energy.txt
   
   # Check if vina command was successful
   if [ $? -eq 0 ]; then
