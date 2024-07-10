@@ -5,12 +5,12 @@ mkdir -p vina_outputs_decoys_1a4g
 mkdir -p vina_console_output_decoys_1a4g
 
 # Define the receptor and config file
-RECEPTOR="2oo8_receptor_prepared.pdbqt"
+RECEPTOR="1a4g_receptor_prepared.pdbqt"
 CONFIG="grid_box.txt"
-EXHAUSTIVENESS=20
+EXHAUSTIVENESS=32
 
 # Loop through each ligand file in the output_ligands directory
-for LIGAND in output_decoys/*.pdbqt; do
+for LIGAND in output_decoys_1a4g/*.pdbqt; do
   # Check if there are no matching files
   if [ ! -e "$LIGAND" ]; then
     echo "No ligand files found in the output_ligands directory."
