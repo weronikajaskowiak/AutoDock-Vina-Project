@@ -7,7 +7,7 @@ mkdir -p vina_console_output_1a4g
 # Define the receptor and config file
 RECEPTOR="1a4g_receptor_prepared.pdbqt"
 CONFIG="grid_box.txt"
-EXHAUSTIVENESS=20
+EXHAUSTIVENESS=32
 
 # Loop through each ligand file in the output_ligands directory
 for LIGAND in output_ligands_1a4g/*.pdbqt; do
